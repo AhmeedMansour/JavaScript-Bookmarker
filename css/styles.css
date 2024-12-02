@@ -1,0 +1,327 @@
+:root {
+  --main-color: #f3f6f6;
+  --header-font: "Pacifico", serif;
+  --header-color: #352e28;
+  --header-before: #fec260;
+  --secondary-font: "Righteous", sans-serif;
+  --text-font: "PT Sans Caption", sans-serif;
+  --text-color: #212529;
+  --btn-submit: #d1512d;
+  --btn-submit-hover: #bb4120;
+  --btn-visit: #9eb23b;
+  --btn-visit-hover: #8a9e23;
+  --btn-visit-hover-border: #6e8018;
+  --btn-delete: #eb1d36;
+  --btn-delete-hover: #d30820;
+  --btn-delete-hover-border: #ba081d;
+  /* DARK  */
+  --main-color-dark: #13192f;
+  --header-color-dark: #ffffff;
+  --text-color-dark: #e0e0e0;
+  --btn-submit-dark: #d1512d;
+  --btn-visit-dark: #9eb23b;
+  --btn-delete-dark: #eb1d36;
+  --btn-visit-dark-hover: #8a9e23;
+  --btn-submit-dark-hover: #bb4120;
+  --btn-delete-dark-hover: #d30820;
+}
+
+* {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: var(--text-font);
+}
+
+.head-title h1 {
+  font-family: var(--header-font);
+  color: var(--header-color);
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 500;
+  position: relative;
+}
+
+.head-title h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  background-color: var(--header-before);
+  transition: height 350ms;
+  z-index: -1;
+}
+
+.head-title h1:hover::before {
+  height: 50%;
+}
+
+.mid-head {
+  border: 2px solid var(--bs-body-bg);
+  background-color: #ffffff;
+}
+
+.mid-head h2 {
+  font-family: var(--secondary-font);
+  font-size: 30px;
+  background-image: linear-gradient(to right, #c4eb8b, #e06a55);
+  background-clip: text;
+  color: transparent;
+}
+
+.site-name,
+.site-url {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.site-name i,
+.site-url i {
+  font-weight: 900;
+  line-height: 16px;
+}
+
+input {
+  font-weight: 400;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: var(--text-color);
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(254, 194, 96, 0.33);
+}
+
+.btn {
+  color: #fff;
+}
+
+.submit-btn button {
+  background-color: var(--btn-submit);
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.submit-btn button:hover {
+  color: #fff;
+  background-color: var(--btn-submit-hover);
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  font-family: var(--text-font);
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 24px;
+}
+
+tbody {
+  font-family: var(--text-font);
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 24px;
+}
+
+.btn-visit {
+  background-color: var(--btn-visit);
+  border-color: var(--btn-visit);
+}
+
+.btn-visit:hover {
+  color: #fff;
+  background-color: var(--btn-visit-hover);
+  border-color: var(--btn-visit-hover-border);
+}
+
+.btn-delete {
+  background-color: var(--btn-delete);
+  border-color: var(--btn-delete);
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: var(--btn-delete-hover);
+  border-color: var(--btn-delete-hover-border);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: var(--main-color-dark);
+  color: #fff;
+}
+
+body.dark-mode .head-title h1 {
+  color: #fff;
+}
+
+body.dark-mode .head-title h1::before {
+  background-color: #34495e;
+}
+
+body.dark-mode .mid-head {
+  border-color: #221d51;
+  background-color: #221d51;
+}
+
+body.dark-mode .mid-head h2 {
+  background: linear-gradient(to right, #4c4687, #9829d9);
+  background-clip: text;
+  color: transparent;
+}
+
+body.dark-mode .form-control:focus {
+  border-color: #d99c39;
+}
+
+body.dark-mode .btn {
+  color: #fff;
+}
+
+body.dark-mode .btn-visit {
+  background-color: #9eb23b;
+}
+
+body.dark-mode .btn-visit:hover {
+  background-color: #8a9e23;
+}
+
+body.dark-mode .btn-delete {
+  background-color: #eb1d36;
+}
+
+body.dark-mode .btn-delete:hover {
+  background-color: #d30820;
+}
+
+body.dark-mode .btn {
+  color: #fff;
+}
+
+body.dark-mode .submit-btn button {
+  background-color: var(--btn-submit-dark);
+}
+
+body.dark-mode .submit-btn button:hover {
+  background-color: var(--btn-submit-dark-hover);
+}
+
+body.dark-mode .btn-visit {
+  background-color: var(--btn-visit-dark);
+}
+
+body.dark-mode .btn-visit:hover {
+  background-color: var(--btn-visit-dark-hover);
+}
+
+body.dark-mode .btn-delete {
+  background-color: var(--btn-delete-dark);
+}
+
+body.dark-mode .btn-delete:hover {
+  background-color: var(--btn-delete-dark-hover);
+}
+
+body,
+.btn,
+.table,
+.head-title h1 {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#darkModeToggle .icon {
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 0;
+  font-size: 30px;
+  color: #f1c40f;
+}
+
+#darkModeToggle .fa-sun {
+  left: 5px;
+}
+
+#darkModeToggle .fa-moon {
+  right: 5px;
+  color: #34495e;
+}
+
+body.dark-mode #sun-icon {
+  opacity: 0;
+}
+
+body.dark-mode #moon-icon {
+  opacity: 1;
+}
+
+body:not(.dark-mode) #sun-icon {
+  opacity: 1;
+}
+
+body:not(.dark-mode) #moon-icon {
+  opacity: 0;
+}
+
+body.dark-mode #darkModeToggle {
+  color: #fff;
+}
+
+body:not(.dark-mode) #darkModeToggle {
+  color: #f1c40f;
+}
+
+/* ***********************   Table   ******************************* */
+
+/* Light Mode Table */
+.table {
+  border-radius: 10px;
+  border: 2px solid #eaeff4;
+  overflow: hidden;
+}
+
+.table > :not(caption) > * > * {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+/* Dark Mode Table */
+body.dark-mode .table {
+  border-radius: 10px;
+  border: 2px solid #495057;
+}
+
+body.dark-mode .table > :not(caption) > * > * {
+  color: #e0e0e0;
+  background-color: #1d1c46;
+}
+
+
+table>thead>tr>th {
+  background-color:#eaeff4 !important;
+}
+body.dark-mode table>thead>tr>th {
+  background-color: #3B2489 !important;
+}
