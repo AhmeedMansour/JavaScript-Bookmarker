@@ -27,19 +27,22 @@
 }
 
 * {
+  box-sizing: border-box; /* Added for better layout control */
   text-decoration: none;
 }
 
 body {
   background-color: var(--main-color);
   font-family: var(--text-font);
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
 }
 
 .head-title h1 {
   font-family: var(--header-font);
   color: var(--header-color);
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 2.5rem; /* Responsive font size */
+  line-height: 1.2; /* Improved line height */
   font-weight: 500;
   position: relative;
 }
@@ -64,11 +67,12 @@ body {
 .mid-head {
   border: 2px solid var(--bs-body-bg);
   background-color: #ffffff;
+  padding: 20px; /* Added padding for better spacing */
 }
 
 .mid-head h2 {
   font-family: var(--secondary-font);
-  font-size: 30px;
+  font-size: 1.875rem; /* Responsive font size */
   background-image: linear-gradient(to right, #c4eb8b, #e06a55);
   background-clip: text;
   color: transparent;
@@ -78,20 +82,22 @@ body {
 .site-url {
   font-family: var(--text-font);
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 1rem; /* Responsive font size */
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5; /* Improved line height */
 }
 
 .site-name i,
 .site-url i {
   font-weight: 900;
-  line-height: 16px;
+  line-height: 1; /* Adjusted for better alignment */
 }
 
 input {
   font-weight: 400;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 10px; /* Added padding for better usability */
+  border-radius: 5px; /* Rounded corners for inputs */
 }
 
 .form-control:focus {
@@ -104,36 +110,39 @@ input {
 
 .btn {
   color: #fff;
+  border-radius: 5px; /* Rounded corners for buttons */
+  padding: 10px 20px; /* Added padding for better usability */
+  border: none; /* Removed default border */
+  cursor: pointer; /* Pointer cursor for buttons */
 }
 
 .submit-btn button {
   background-color: var(--btn-submit);
-  color: #fff;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem; /* Responsive font size */
+  line-height: 1.5; /* Improved line height */
 }
 
 .submit-btn button:hover {
-  color: #fff;
   background-color: var(--btn-submit-hover);
 }
 
 table {
   width: 100%;
+  border-collapse: collapse; /* Improved table layout */
 }
 
 thead {
   font-family: var(--text-font);
-  font-weight: 700;
+ font-weight: 700;
   color: var(--text-color);
-  line-height: 24px;
+  line-height: 1.5; /* Improved line height */
 }
 
 tbody {
   font-family: var(--text-font);
   font-weight: 400;
   color: var(--text-color);
-  line-height: 24px;
+  line-height: 1.5; /* Improved line height */
 }
 
 .btn-visit {
@@ -142,7 +151,6 @@ tbody {
 }
 
 .btn-visit:hover {
-  color: #fff;
   background-color: var(--btn-visit-hover);
   border-color: var(--btn-visit-hover-border);
 }
@@ -153,7 +161,6 @@ tbody {
 }
 
 .btn-delete:hover {
-  color: #fff;
   background-color: var(--btn-delete-hover);
   border-color: var(--btn-delete-hover-border);
 }
@@ -205,10 +212,6 @@ body.dark-mode .btn-delete {
 
 body.dark-mode .btn-delete:hover {
   background-color: #d30820;
-}
-
-body.dark-mode .btn {
-  color: #fff;
 }
 
 body.dark-mode .submit-btn button {
@@ -318,10 +321,75 @@ body.dark-mode .table > :not(caption) > * > * {
   background-color: #1d1c46;
 }
 
-
-table>thead>tr>th {
-  background-color:#eaeff4 !important;
+table > thead > tr > th {
+  background-color: #eaeff4 !important;
 }
-body.dark-mode table>thead>tr>th {
+
+body.dark-mode table > thead > tr > th {
   background-color: #3B2489 !important;
 }
+
+/* Responsive ```css
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .head-title h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .mid-head h2 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .site-name,
+  .site-url {
+    font-size: 0.875rem; /* Smaller font size for mobile */
+  }
+
+  .submit-btn button {
+    font-size: 1rem; /* Smaller button font size for mobile */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Adjusted padding for mobile */
+  }
+
+  #darkModeToggle {
+    font-size: 24px; /* Smaller toggle button for mobile */
+  }
+}
+
+@media (max-width: 500px) {
+  .head-title h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .mid-head h2 {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+  #bookmarkForm {
+      margin-top: 20px;
+      
+  }
+  .form-label{
+      font-size: 0.875rem; /* Smaller label font size for mobile */
+  }
+  .site-name,
+  .site-url {
+    font-size: 0.5rem; /* Smaller font size for mobile */
+  }
+
+  .submit-btn button {
+    font-size: 1rem; /* Smaller button font size for mobile */
+    padding: 10px 15px !important;
+  }
+
+
+  .btn {
+    padding: 8px 10px; /* Adjusted padding for mobile */
+  }
+
+  #darkModeToggle {
+    font-size: 24px; /* Smaller toggle button for mobile */
+  }
+}
+
