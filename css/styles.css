@@ -393,3 +393,6 @@ body.dark-mode table > thead > tr > th {
   }
 }
 
+.btn:hover {
+  color:#fff
+}
